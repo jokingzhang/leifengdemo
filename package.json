@@ -1,0 +1,51 @@
+{
+  "name": "react-leifeng-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-hook": "nodemon -w server server/server.js",
+    "init-db": "node scripts/init.mongo.js",
+    "compile": "webpack",
+    "watch": "webpack-dev-server --hot --inline --host 0.0.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "babel-plugin-transform-do-expressions": "^6.22.0",
+    "babel-plugin-transform-function-bind": "^6.22.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "moment": "^2.22.2",
+    "mongodb": "^3.1.4",
+    "nodemon": "^1.10.0",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "redux": "^3.7.2",
+    "redux-devtools": "^3.4.1",
+    "redux-thunk": "^2.3.0",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.8"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "body-parser": "^1.18.3",
+    "clean-webpack-plugin": "^0.1.19",
+    "express": "^4.16.3",
+    "html-webpack-plugin": "^3.2.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "source-map-support": "^0.5.9"
+  }
+}
