@@ -11,43 +11,41 @@ import {
 import { view as Home } from './routes/Home';
 import { view as ArticleList } from './routes/ArticleList';
 
-import store from './Store.js'
+import store from './Store';
 
-console.info(1123)
-console.info(1123)
 
-const NotFound = (props) =>(
+const NotFound = props => (
     <h1>not found</h1>
 );
 
 render(
     <Provider store={store}>
-      <Router>
-        <div>
-            <ul>
-                <li>
-                  <Link to="/">Home</Link>
-                </li>
-                <li>
-                  <Link to="/articles">Articles</Link>
-                </li>
-                <li>
-                  <Link to="/will-match">Will no Match</Link>
-                </li>
-            </ul>
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route path="/articles" component={ArticleList} />
-              {/* when none of the above match, <NotFound> will be rendered */}
-              <Route component={NotFound} />
-            </Switch>
-        </div>
-      </Router>
+        <Router>
+            <div>
+                <ul>
+                    <li>
+                        <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                        <Link to="/articles">Articles</Link>
+                    </li>
+                    <li>
+                        <Link to="/will-match">Will no Match</Link>
+                    </li>
+                </ul>
+                <Switch>
+                    <Route exact path="/" component={Home} />
+                    <Route path="/articles" component={ArticleList} />
+                    {/* when none of the above match, <NotFound> will be rendered */}
+                    <Route component={NotFound} />
+                </Switch>
+            </div>
+        </Router>
     </Provider>,
     window.document.getElementById('app')
 );
 
 if (module && module.hot) {
-  module.hot.accept();
+    module.hot.accept();
 }
 

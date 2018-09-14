@@ -8,7 +8,11 @@
     "start-hook": "nodemon -w server server/server.js",
     "init-db": "node scripts/init.mongo.js",
     "compile": "webpack",
-    "watch": "webpack-dev-server --hot --inline --host 0.0.0.0"
+    "precommit": "lint-staged",
+    "watch": "webpack-dev-server --hot --inline --host 0.0.0.0",
+    "lint-staged": "node_modules/.bin/lint-staged",
+    "lint": "node_modules/.bin/eslint --ext \".js\" src/",
+    "lintquiet": "node_modules/.bin/eslint --ext \".js\" src/  --quiet"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +20,8 @@
   "pre-commit": "lint-staged",
   "lint-staged": {
     "*.js": [
-      "node_modules/.bin/eslint --ignore-path .eslintignore"
+      "node_modules/.bin/eslint --ignore-path .eslintignore",
+      "eslint --fix", "git add"
     ]
   },
   "config": {
@@ -33,7 +38,6 @@
     "babel-plugin-transform-function-bind": "^6.22.0",
     "babel-preset-stage-0": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
-    "eslint": "^5.5.0",
     "moment": "^2.22.2",
     "mongodb": "^3.1.4",
     "nodemon": "^1.10.0",
@@ -59,6 +63,13 @@
     "babel-preset-react": "^6.24.1",
     "body-parser": "^1.18.3",
     "clean-webpack-plugin": "^0.1.19",
+    "eslint": "3.7.1",
+    "eslint-config-airbnb": "12.0.0",
+    "eslint-import-resolver-webpack": "0.8.3",
+    "eslint-plugin-flowtype": "2.40.1",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-jsx-a11y": "2.2.3",
+    "eslint-plugin-react": "^6.3.0",
     "express": "^4.16.3",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^0.14.3",
