@@ -21,7 +21,6 @@ export const fetchArticles = () => {
   return (dispatch) => {
 
     dispatch(fetchArticlesStarted())
-
     return fetch('/api/articles').then((response) => {
         if (response.ok) {
             response.json().then(data => {

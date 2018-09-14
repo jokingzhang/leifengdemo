@@ -8,11 +8,14 @@ import {
   Switch,
   Link
 } from 'react-router-dom';
-import NotFound from './NotFound';
 import { view as Home } from './routes/Home';
 import { view as ArticleList } from './routes/ArticleList';
 
 import store from './Store.js'
+
+const NotFound = (props) =>(
+    <h1>not found</h1>
+);
 
 render(
     <Provider store={store}>
@@ -40,7 +43,6 @@ render(
     </Provider>,
     window.document.getElementById('app')
 );
-
 
 if (module && module.hot) {
   module.hot.accept();

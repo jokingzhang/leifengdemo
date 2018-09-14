@@ -9,7 +9,6 @@ const reducer = combineReducers({
 });
 
 const middlewares = [thunkMiddleware];
-
 const storeEnhancers = compose(
   applyMiddleware(...middlewares)
 );

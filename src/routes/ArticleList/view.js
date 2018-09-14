@@ -34,7 +34,6 @@ export class ArticleList extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        // console.info('componentWillReceiveProps==>', nextProps)
         if (nextProps.data &&
             nextProps.data.length &&
             nextProps.data !== this.props.data) {
