@@ -38,6 +38,8 @@ export class ArticleList extends Component {
             nextProps.data.length &&
             nextProps.data !== this.props.data) {
             console.info('componentWillReceiveProps==>', nextProps.data);
+            console.info('componentWillReceiveProps==>', nextProps.data);
+
             this.setState({
                 articles: nextProps.data
             })

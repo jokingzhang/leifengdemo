@@ -1,7 +1,6 @@
 import {FETCH_STARTED, FETCH_SUCCESS, FETCH_FAILURE} from './actions';
 
 export default (state = {status: 'loading'}, action) => {
-
   switch(action.type) {
     case FETCH_STARTED: {
       return {status: 'loading'};

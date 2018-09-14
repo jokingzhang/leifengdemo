@@ -13,21 +13,38 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "pre-commit": "lint-staged",
+  "lint-staged": {
+    "*.js": [
+      "node_modules/.bin/eslint --ignore-path .eslintignore"
+    ]
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "node_modules/.bin/validate-commit-msg"
+    }
+  },
   "dependencies": {
+    "antd": "3.9.1",
     "assert": "^1.4.1",
+    "babel-eslint": "7.1.1",
     "babel-plugin-transform-do-expressions": "^6.22.0",
     "babel-plugin-transform-function-bind": "^6.22.0",
     "babel-preset-stage-0": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
+    "eslint": "^5.5.0",
     "moment": "^2.22.2",
     "mongodb": "^3.1.4",
     "nodemon": "^1.10.0",
+    "react-bootstrap": "^0.32.4",
     "react-redux": "^5.0.7",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "redux": "^3.7.2",
     "redux-devtools": "^3.4.1",
     "redux-thunk": "^2.3.0",
+    "validate-commit-msg": "2.12.2",
     "webpack": "^4.17.1",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.8"
@@ -44,8 +61,10 @@
     "clean-webpack-plugin": "^0.1.19",
     "express": "^4.16.3",
     "html-webpack-plugin": "^3.2.0",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.2",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
     "source-map-support": "^0.5.9"
   }
 }
