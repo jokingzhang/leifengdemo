@@ -14,6 +14,7 @@ import { view as ArticleList } from './routes/ArticleList';
 import store from './Store.js'
 
 console.info(1123)
+console.info(1123)
 
 const NotFound = (props) =>(
     <h1>not found</h1>
