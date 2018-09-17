@@ -20,8 +20,7 @@
   "pre-commit": "lint-staged",
   "lint-staged": {
     "*.js": [
-      "node_modules/.bin/eslint --ignore-path .eslintignore",
-      "eslint --fix", "git add"
+      "node_modules/.bin/eslint --ignore-path .eslintignore"
     ]
   },
   "config": {

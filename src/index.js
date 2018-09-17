@@ -1,49 +1,29 @@
-import React, { Component } from 'react';
-import { render } from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import {
   HashRouter as Router,
   Route,
   Switch,
   Link
 } from 'react-router-dom';
-import { view as Home } from './routes/Home';
-import { view as ArticleList } from './routes/ArticleList';
-
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 import store from './Store';
+import App from './App';
 
+const render = Component => {   // 增加react-hot-loader保持状态刷新操作，如果不需要可去掉并把下面注释的打开
+    ReactDOM.render(
+        <Provider store={store}>
+            <Router>
+                <Route path="/" component={Component} />
+            </Router>
+        </Provider>
+        ,
+        document.getElementById('app')
+    );
+};
 
-const NotFound = props => (
-    <h1>not found</h1>
-);
-
-render(
-    <Provider store={store}>
-        <Router>
-            <div>
-                <ul>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/articles">Articles</Link>
-                    </li>
-                    <li>
-                        <Link to="/will-match">Will no Match</Link>
-                    </li>
-                </ul>
-                <Switch>
-                    <Route exact path="/" component={Home} />
-                    <Route path="/articles" component={ArticleList} />
-                    {/* when none of the above match, <NotFound> will be rendered */}
-                    <Route component={NotFound} />
-                </Switch>
-            </div>
-        </Router>
-    </Provider>,
-    window.document.getElementById('app')
-);
+render(App);
 
 if (module && module.hot) {
     module.hot.accept();
