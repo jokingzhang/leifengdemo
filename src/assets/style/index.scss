@@ -1,1 +1,7 @@
 @import './antd.scss';
+
+.c-layout {
+    &__content {
+        margin: 30px;
+    }
+}

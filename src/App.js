@@ -20,7 +20,7 @@ export default class App extends Component {
                 <SiderCustom />
                 <Layout>
                     <HeaderCustom />
-                    <Content style={{ margin: '0 16px' }}>
+                    <Content className="c-layout__content">
                         <Routes />
                     </Content>
                     <Footer style={{ textAlign: 'center' }}>

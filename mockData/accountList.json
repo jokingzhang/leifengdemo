@@ -1,0 +1,57 @@
+[{
+    "accountNumber": "U124514251",
+    "accountName": "青劲有限公司1",
+    "accountAlias": "曼妥思",
+    "accountType": "STL-Master",
+    "slaveAccount": "L123123",
+    "accountStatus": true
+},{
+    "accountNumber": "U124514252",
+    "accountName": "青劲有限公司2",
+    "accountAlias": "曼妥思",
+    "accountType": "STL-Master",
+    "slaveAccount": "L123123",
+    "accountStatus": true
+},{
+    "accountNumber": "U124514253",
+    "accountName": "青劲有限公司3",
+    "accountAlias": "曼妥思",
+    "accountType": "STL-Master",
+    "slaveAccount": "L123123",
+    "accountStatus": true
+},{
+    "accountNumber": "U124514254",
+    "accountName": "青劲有限公司4",
+    "accountAlias": "曼妥思",
+    "accountType": "STL-Master",
+    "slaveAccount": null,
+    "accountStatus": true
+},{
+    "accountNumber": "U124514255",
+    "accountName": "青劲有限公司5",
+    "accountAlias": "曼妥思",
+    "accountType": "STL-Master",
+    "slaveAccount": "L123123",
+    "accountStatus": true
+},{
+    "accountNumber": "U124514256",
+    "accountName": "青劲有限公司6",
+    "accountAlias": "曼妥思",
+    "accountType": "STL-Master",
+    "slaveAccount": null,
+    "accountStatus": false
+},{
+    "accountNumber": "U124514257",
+    "accountName": "青劲有限公司7",
+    "accountAlias": "曼妥思",
+    "accountType": "STL-Master",
+    "slaveAccount": "L123123",
+    "accountStatus": true
+},{
+    "accountNumber": "U124514258",
+    "accountName": "青劲有限公司8",
+    "accountAlias": "曼妥思",
+    "accountType": "STL-Sub",
+    "slaveAccount": "L123123",
+    "accountStatus": true
+}]
