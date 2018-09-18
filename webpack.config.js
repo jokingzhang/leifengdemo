@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 var jsPath = path.join(__dirname, './src');
+var assetsPath = path.join(__dirname, './src/assets');
 
 module.exports = {
   entry: __dirname + '/src/index.js',
@@ -31,6 +32,7 @@ module.exports = {
     extensions: ['.js', '.jsx'],
     alias: {
         jscom: jsPath,
+        assets: assetsPath,
     },
   },
   module: {

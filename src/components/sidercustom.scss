@@ -1,0 +1,21 @@
+.c-sider {
+    &__logo {
+        width: 140px;
+        margin: 0 24px;
+        height: 80px;
+        background-image: url(./images/logo.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: 0.2s 0.2s width ease;
+
+        @at-root {
+            .ant-layout-sider-collapsed & {
+                background-image: url(./images/logo-small.png);
+                width: 42%;
+                max-width: 42%;
+                margin: 0 auto;
+            }
+        }
+    }
+}

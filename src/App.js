@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 import Routes from './routes';
 import SiderCustom from './components/SiderCustom';
+import HeaderCustom from './components/HeaderCustom';
 
 const { Header, Content, Footer, Sider } = Layout;
 const SubMenu = Menu.SubMenu;
@@ -9,7 +10,7 @@ const SubMenu = Menu.SubMenu;
 export default class App extends Component {
     state = {
         collapsed: false,
-    };
+    }
     onCollapse = (collapsed) => {
         this.setState({ collapsed });
     }
@@ -18,14 +19,12 @@ export default class App extends Component {
             <Layout style={{ minHeight: '100vh' }}>
                 <SiderCustom />
                 <Layout>
-                    <Header style={{ background: '#fff', padding: '0 16px' }} >
-                        <h3> Lei Feng Demo </h3>
-                    </Header>
+                    <HeaderCustom />
                     <Content style={{ margin: '0 16px' }}>
                         <Routes />
                     </Content>
                     <Footer style={{ textAlign: 'center' }}>
-                        Ant Design ©2018 Created by Ant UED
+                        Power by Tiger Trade
                     </Footer>
                 </Layout>
             </Layout>
