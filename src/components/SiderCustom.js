@@ -22,12 +22,16 @@ export class SiderCustom extends Component {
                 <div className="logo" />
                 <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
                     <Menu.Item key="1">
-                        <Icon type="home" theme="outlined" />
-                        <Link to="/">Home</Link>
+                        <Link to="/">
+                            <Icon type="home" theme="outlined" />
+                            <span>Home</span>
+                        </Link>
                     </Menu.Item>
                     <Menu.Item key="2">
-                        <Icon type="book" theme="outlined" />
-                        <Link to="/articles">Articles</Link>
+                        <Link to="/articles">
+                            <Icon type="book" theme="outlined" />
+                            <span>Articles</span>
+                        </Link>
                     </Menu.Item>
                     <SubMenu
                         key="sub1"
@@ -45,8 +49,10 @@ export class SiderCustom extends Component {
                         <Menu.Item key="8">Team 2</Menu.Item>
                     </SubMenu>
                     <Menu.Item key="9">
-                        <Icon type="file" />
-                        <span>File</span>
+                        <Link to="/cardpage">
+                            <Icon type="file" />
+                            <span>File</span>
+                        </Link>
                     </Menu.Item>
                 </Menu>
             </Sider>

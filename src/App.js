@@ -18,7 +18,9 @@ export default class App extends Component {
             <Layout style={{ minHeight: '100vh' }}>
                 <SiderCustom />
                 <Layout>
-                    <Header style={{ background: '#fff', padding: 0 }} />
+                    <Header style={{ background: '#fff', padding: '0 16px' }} >
+                        <h3> Lei Feng Demo </h3>
+                    </Header>
                     <Content style={{ margin: '0 16px' }}>
                         <Routes />
                     </Content>

@@ -2,12 +2,17 @@ const path = require('path');
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 var jsPath = path.join(__dirname, './src');
 
 module.exports = {
   entry: __dirname + '/src/index.js',
   plugins: [
+    new MiniCssExtractPlugin({
+        filename: '[name].css',
+        chunkFilename: '[name].css',
+    }),
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
       filename: 'index.html',
@@ -30,12 +35,51 @@ module.exports = {
   },
   module: {
     rules: [
+      { // 0
+          test: /\.s?[ac]ss$/,
+          use: [
+              MiniCssExtractPlugin.loader,
+              {
+                  loader: 'css-loader',
+                  options: {
+                      sourceMap: true
+                  }
+              },
+              'resolve-url-loader',
+              {
+                  loader: 'sass-loader',
+                  options: {
+                      sourceMap: true
+                  }
+              }
+          ]
+      },
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)?$/,
         use: ['babel-loader'],
         // 排除 node_modules 目录下的文件，node_modules 目录下的文件都是采用的 ES5 语法，没必要再通过 Babel 去转换
         exclude: path.resolve(__dirname, 'node_modules'),
       },
+      {  // 1
+            test: /\.(jpe?g|png|gif|svg)$/i,
+            use: [
+                {
+                    loader: "file-loader",
+                    options: {
+                        hash: "sha512",
+                        digest: "hex",
+                        name: "[path][name].[hash:8].[ext]"
+                    }
+                },
+                {
+                    loader: 'image-webpack-loader',
+                }
+            ]
+        },
+        {  // 2
+            test: /\.(eot|ttf|woff|woff2)$/,
+            loader: "url-loader?limit=10000&mimetype=application/font-woff&name=[path][name].[hash:8].[ext]"
+        }
     ]
   },
   optimization: {
