@@ -7,15 +7,11 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
-        transition: 0.2s 0.2s width ease;
 
-        @at-root {
-            .ant-layout-sider-collapsed & {
-                background-image: url(./images/logo-small.png);
-                width: 42%;
-                max-width: 42%;
-                margin: 0 auto;
-            }
+        &--small{
+            background-image: url(./images/logo-small.png);
+            width: 34px;
+            margin-left: 25px;
         }
     }
 }

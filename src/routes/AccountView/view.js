@@ -73,7 +73,7 @@ export class AccountList extends Component {
 
     static propTypes = {
         status: PropTypes.string.isRequired,
-        data: PropTypes.array.isRequired,
+        data: PropTypes.array,
         search: PropTypes.func.isRequired,
     }
 
@@ -107,7 +107,11 @@ export class AccountList extends Component {
         const { accountList } = this.state;
 
         return (
-            <Table columns={columns} dataSource={accountList} />
+            <Table
+                columns={columns}
+                dataSource={accountList}
+                pagination={false}
+            />
         );
     }
 

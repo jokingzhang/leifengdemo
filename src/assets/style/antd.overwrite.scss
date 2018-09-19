@@ -1,0 +1,30 @@
+
+.ant-table-thead > tr > td,
+.ant-table-tbody > tr > td {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background: #fafafa;
+}
+
+.ant-table-content {
+    padding-top: 10px;
+    padding-bottom: 54px;
+    background: #fafafa;
+}
+
+.ant-table-thead > tr:first-child > th:first-child {
+    padding-left: 48px;
+}
+
+.ant-table-tbody > tr > td:first-child {
+    padding-left: 48px;
+}
+
+.ant-table-thead > tr:last-child > th:last-child {
+    padding-right: 48px;
+}
+
+.ant-table-tbody > tr > td:last-child {
+    padding-right: 48px;
+}

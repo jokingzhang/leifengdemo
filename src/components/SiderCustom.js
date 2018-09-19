@@ -22,11 +22,16 @@ export class SiderCustom extends Component {
                 collapsed={this.state.collapsed}
                 onCollapse={this.onCollapse}
             >
-                <div className="c-sider__logo" />
+                {
+                    !this.state.collapsed ?
+                        <div className="c-sider__logo" /> :
+                        <div className="c-sider__logo c-sider__logo--small" />
+                }
                 <SiderMenu
                     menus={routes.menus}
                     theme="dark"
                     mode="inline"
+                    inlineCollapsed={this.state.collapsed}
                 />
             </Sider>
         )
