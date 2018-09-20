@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Table, Divider, Tag } from 'antd';
+import { Table, Divider, Tag, Button } from 'antd';
 import moment from 'moment';
 import { fetchAccounts } from './actions'
 
@@ -64,7 +64,7 @@ const columns = [{
     key: 'option',
     render: option => (
         <span>
-            <a>查看详情</a>
+            <Button> 查看详情 </Button>
         </span>
     ),
 }];

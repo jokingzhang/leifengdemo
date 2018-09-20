@@ -3,7 +3,7 @@ import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 import { Link, withRouter } from 'react-router-dom';
 import SiderMenu from './SiderMenu';
 import routes from 'jscom/routes/config';
-import './sidercustom.scss';
+import './sidercustom.less';
 
 const { Header, Content, Footer, Sider } = Layout;
 const SubMenu = Menu.SubMenu;

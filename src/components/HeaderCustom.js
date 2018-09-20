@@ -4,6 +4,8 @@ import { withRouter } from 'react-router-dom';
 import { Layout } from 'antd';
 import routes from 'jscom/routes/config';
 
+import './headercustom.less';
+
 const { Header } = Layout;
 
 export class HeaderCustom extends PureComponent {
@@ -18,7 +20,7 @@ export class HeaderCustom extends PureComponent {
         // console.info('location==>', location.pathname, routes.titles);
 
         return (
-            <Header style={{ background: '#fff', padding: '0 16px' }} >
+            <Header className="c-header">
                 <h3> {routes.titles[location.pathname] || 'Demo'} </h3>
             </Header>
         )

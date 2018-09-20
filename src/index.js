@@ -8,7 +8,7 @@ import {
 } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import './assets/style/index.scss';
+import './assets/style/index.less';
 import store from './Store';
 import App from './App';
 

@@ -1,0 +1,61 @@
+@primary-color: #ffe100;
+@link-color: #ffe100;
+@text-color: #515557;
+
+// button start
+
+@btn-default-bg: #fffbd9;
+@btn-default-border: #fff39b;
+
+.ant-btn {
+    &:hover,
+    &:focus,
+    &:active,
+    .active {
+        background: @primary-color;
+        border-color: @primary-color;
+        color: @text-color;
+    }
+}
+
+// button end
+
+
+
+// table start
+
+@table-row-hover-bg: #f9fafb;
+
+.ant-table-thead > tr > th,
+.ant-table-tbody > tr > td {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background: #fff;
+}
+
+.ant-table-content {
+    padding-top: 10px;
+    padding-bottom: 54px;
+    background: #fff;
+}
+
+.ant-table-thead > tr:first-child > th:first-child {
+    padding-left: 48px;
+}
+
+.ant-table-tbody > tr > td:first-child {
+    padding-left: 48px;
+}
+
+.ant-table-thead > tr:last-child > th:last-child {
+    padding-right: 58px;
+    text-align: right;
+}
+
+.ant-table-tbody > tr > td:last-child {
+    padding-right: 48px;
+    text-align: right;
+}
+
+// table end
